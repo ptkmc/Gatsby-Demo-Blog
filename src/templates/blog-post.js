@@ -7,7 +7,6 @@ export default ({ data }) => {
   const post = data.markdownRemark
   const tags = post.frontmatter.tags
     ? post.frontmatter.tags.map(tag => {
-        tag = undefined
         if (!tag) return
         tag = typeof tag === "string" ? `#${tag}` : `#${JSON.stringify(tag)}`
         return (
