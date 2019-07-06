@@ -7,7 +7,9 @@ export default ({ data }) => {
   const post = data.markdownRemark
   const tags = post.frontmatter.tags
     ? post.frontmatter.tags.map(tag => {
-        tag = JSON.stringify(tag)
+        tag = undefined
+        if (!tag) return
+        tag = typeof tag === "string" ? `#${tag}` : `#${JSON.stringify(tag)}`
         return (
           <Link to={`/tags/${kebabCase(tag)}/`}>
             <h4
@@ -17,7 +19,7 @@ export default ({ data }) => {
                 color: "#AAA",
               }}
             >
-              #{tag}
+              {tag}
             </h4>
           </Link>
         )

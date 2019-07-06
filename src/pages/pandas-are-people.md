@@ -2,7 +2,7 @@
 title: "Pandas are People?"
 subheader: "You won't believe what one scientist unearthed."
 timeToRead: "5 min"
-tags: ["animals", "Chicago", "zoos"]
+tags: ["animals", "san diego", "zoos"]
 x: 43
 date: "2017-08-23"
 ---
